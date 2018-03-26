@@ -2620,7 +2620,7 @@ void QCamera2HardwareInterface::dumpFrameToFile(QCameraStream *stream,
                         }
 
                         CDBG_HIGH("%s: written number of bytes %ld\n",
-                            __func__, written_len);
+                            __func__, (long)written_len);
                         close(file_fd);
                     } else {
                         ALOGE("%s: fail t open file for image dumping", __func__);
