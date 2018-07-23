@@ -521,7 +521,17 @@
     <dimen name="config_buttonCornerRadius">4.0dip</dimen>
     <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
 
-   <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
-   <bool name="config_supportAudioSourceUnprocessed">true</bool>
+    <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
+    <bool name="config_supportAudioSourceUnprocessed">true</bool>
+
+    <!-- Is the battery LED intrusive? -->
+    <bool name="config_intrusiveBatteryLed">true</bool>
+
+    <!-- Does the battery LED support multiple colors? -->
+    <bool name="config_multiColorBatteryLed">true</bool>
+
+    <!-- Do the battery/notification LEDs support pulsing?
+        Used to decide if we show pulse settings -->
+    <bool name="config_ledCanPulse">true</bool>
 
 </resources>
