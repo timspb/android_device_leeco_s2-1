@@ -47,9 +47,13 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8952
 
 # Kernel
 <<<<<<< HEAD
+<<<<<<< HEAD
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk androidboot.selinux=permissive
 =======
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk
+=======
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk loop.max_part=7
+>>>>>>> 0d8a708... s2: Set partitions for loop device.
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 >>>>>>> 4633e5c... s2:[DNM]:permissive
 BOARD_KERNEL_BASE := 0x80000000
