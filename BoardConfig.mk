@@ -226,9 +226,14 @@ TARGET_RIL_VARIANT := caf
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Sepolicy
+<<<<<<< HEAD
 # include device/qcom/sepolicy/sepolicy.mk
 # include device/qcom/sepolicy/legacy-sepolicy.mk
 # BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+=======
+include device/qcom/sepolicy-legacy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+>>>>>>> ce6b6d4... s2: Initial sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
