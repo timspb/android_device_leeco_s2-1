@@ -64,8 +64,13 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
+<<<<<<< HEAD
     android.hardware.gnss@1.1-impl-qti \
     android.hardware.gnss@1.1-service-qti
+=======
+    android.hardware.gnss@1.0-impl-qti \
+    android.hardware.gnss@1.0-service-qti
+>>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
 
 # Health HAL
 PRODUCT_PACKAGES += \

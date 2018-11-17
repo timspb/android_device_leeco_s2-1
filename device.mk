@@ -213,7 +213,10 @@ PRODUCT_PACKAGES += \
     libloc_core \
     libloc_ds_api \
     libloc_stub \
+<<<<<<< HEAD
     libloc_pla \
+=======
+>>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
     liblocation_api \
     libvehiclenetwork-native
 

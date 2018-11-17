@@ -18,8 +18,8 @@
  * limitations under the License.
  */
 
-#ifndef ANDROID_HARDWARE_GNSS_V1_1_GNSS_H
-#define ANDROID_HARDWARE_GNSS_V1_1_GNSS_H
+#ifndef ANDROID_HARDWARE_GNSS_V1_0_GNSS_H
+#define ANDROID_HARDWARE_GNSS_V1_0_GNSS_H
 
 #include <AGnss.h>
 #include <AGnssRil.h>
@@ -30,7 +30,11 @@
 #include <GnssNi.h>
 #include <GnssDebug.h>
 
+<<<<<<< HEAD
 #include <android/hardware/gnss/1.1/IGnss.h>
+=======
+#include <android/hardware/gnss/1.0/IGnss.h>
+>>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
 
@@ -94,6 +98,7 @@ struct Gnss : public IGnss {
     }
 
     Return<sp<V1_0::IGnssDebug>> getExtensionGnssDebug() override;
+<<<<<<< HEAD
 
     // Methods from ::android::hardware::gnss::V1_1::IGnss follow.
     Return<bool> setCallback_1_1(const sp<V1_1::IGnssCallback>& callback) override;
@@ -104,6 +109,8 @@ struct Gnss : public IGnss {
     Return<sp<V1_1::IGnssMeasurement>> getExtensionGnssMeasurement_1_1() override;
     Return<sp<V1_1::IGnssConfiguration>> getExtensionGnssConfiguration_1_1() override;
     Return<bool> injectBestLocation(const GnssLocation& location) override;
+=======
+>>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
 
     // These methods are not part of the IGnss base class.
     GnssAPIClient* getApi();
@@ -137,7 +144,10 @@ struct Gnss : public IGnss {
 
     GnssAPIClient* mApi = nullptr;
     sp<V1_0::IGnssCallback> mGnssCbIface = nullptr;
+<<<<<<< HEAD
     sp<V1_1::IGnssCallback> mGnssCbIface_1_1 = nullptr;
+=======
+>>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
     sp<V1_0::IGnssNiCallback> mGnssNiCbIface = nullptr;
     GnssConfig mPendingConfig;
     GnssInterface* mGnssInterface = nullptr;
@@ -151,4 +161,4 @@ extern "C" IGnss* HIDL_FETCH_IGnss(const char* name);
 }  // namespace hardware
 }  // namespace android
 
-#endif  // ANDROID_HARDWARE_GNSS_V1_1_GNSS_H
+#endif  // ANDROID_HARDWARE_GNSS_V1_0_GNSS_H
