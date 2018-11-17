@@ -1,1 +1,1 @@
-add_lunch_combo arrow_s2-userdebug
+add_lunch_combo havoc_s2-userdebug
