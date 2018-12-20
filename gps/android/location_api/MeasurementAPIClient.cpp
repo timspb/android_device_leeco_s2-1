@@ -43,19 +43,12 @@ namespace V1_1 {
 namespace implementation {
 
 using ::android::hardware::gnss::V1_0::IGnssMeasurement;
-<<<<<<< HEAD
 using ::android::hardware::gnss::V1_1::IGnssMeasurementCallback;
 
 static void convertGnssData(GnssMeasurementsNotification& in,
         V1_0::IGnssMeasurementCallback::GnssData& out);
 static void convertGnssData_1_1(GnssMeasurementsNotification& in,
         IGnssMeasurementCallback::GnssData& out);
-=======
-using ::android::hardware::gnss::V1_0::IGnssMeasurementCallback;
-
-static void convertGnssData(GnssMeasurementsNotification& in,
-        V1_0::IGnssMeasurementCallback::GnssData& out);
->>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
 static void convertGnssMeasurement(GnssMeasurementsData& in,
         V1_0::IGnssMeasurementCallback::GnssMeasurement& out);
 static void convertGnssClock(GnssMeasurementsClock& in, IGnssMeasurementCallback::GnssClock& out);
@@ -85,7 +78,6 @@ MeasurementAPIClient::measurementSetCallback(const sp<V1_0::IGnssMeasurementCall
 
     return startTracking();
 }
-<<<<<<< HEAD
 
 Return<IGnssMeasurement::GnssMeasurementStatus>
 MeasurementAPIClient::measurementSetCallback_1_1(const sp<IGnssMeasurementCallback>& callback)
@@ -98,8 +90,6 @@ MeasurementAPIClient::measurementSetCallback_1_1(const sp<IGnssMeasurementCallba
 
     return startTracking();
 }
-=======
->>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
 
 Return<IGnssMeasurement::GnssMeasurementStatus>
 MeasurementAPIClient::startTracking()
@@ -154,19 +144,16 @@ void MeasurementAPIClient::onGnssMeasurementsCb(
     if (mTracking) {
         mMutex.lock();
         sp<V1_0::IGnssMeasurementCallback> gnssMeasurementCbIface = nullptr;
-<<<<<<< HEAD
+
         sp<IGnssMeasurementCallback> gnssMeasurementCbIface_1_1 = nullptr;
         if (mGnssMeasurementCbIface_1_1 != nullptr) {
             gnssMeasurementCbIface_1_1 = mGnssMeasurementCbIface_1_1;
         } else if (mGnssMeasurementCbIface != nullptr) {
-=======
-        if (mGnssMeasurementCbIface != nullptr) {
->>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
             gnssMeasurementCbIface = mGnssMeasurementCbIface;
         }
         mMutex.unlock();
 
-<<<<<<< HEAD
+
         if (gnssMeasurementCbIface_1_1 != nullptr) {
             IGnssMeasurementCallback::GnssData gnssData;
             convertGnssData_1_1(gnssMeasurementsNotification, gnssData);
@@ -176,9 +163,6 @@ void MeasurementAPIClient::onGnssMeasurementsCb(
                     __func__, r.description().c_str());
             }
         } else if (gnssMeasurementCbIface != nullptr) {
-=======
-        if (gnssMeasurementCbIface != nullptr) {
->>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
             V1_0::IGnssMeasurementCallback::GnssData gnssData;
             convertGnssData(gnssMeasurementsNotification, gnssData);
             auto r = gnssMeasurementCbIface->GnssMeasurementCb(gnssData);
