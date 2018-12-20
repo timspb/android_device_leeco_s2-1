@@ -56,6 +56,8 @@ LOCAL_C_INCLUDES := \
         frameworks/native/libs/arect/include \
         frameworks/native/libs/nativebase/include \
         hardware/qcom/media-caf-msm8952/libstagefrighthw \
+        hardware/qcom/display-caf-msm8952/libqdutils \
+        hardware/qcom/display-caf-msm8952/libgralloc \
         system/media/camera/include \
         $(LOCAL_PATH)/../mm-image-codec/qexif \
         $(LOCAL_PATH)/../mm-image-codec/qomx_core \
