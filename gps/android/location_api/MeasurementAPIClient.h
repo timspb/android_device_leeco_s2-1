@@ -31,13 +31,8 @@
 #define MEASUREMENT_API_CLINET_H
 
 #include <mutex>
-<<<<<<< HEAD
 #include <android/hardware/gnss/1.1/IGnssMeasurement.h>
 #include <android/hardware/gnss/1.1/IGnssMeasurementCallback.h>
-=======
-#include <android/hardware/gnss/1.0/IGnssMeasurement.h>
-#include <android/hardware/gnss/1.0/IGnssMeasurementCallback.h>
->>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
 #include <LocationAPIClientBase.h>
 #include <hidl/Status.h>
 
@@ -60,11 +55,9 @@ public:
     // for GpsMeasurementInterface
     Return<V1_0::IGnssMeasurement::GnssMeasurementStatus> measurementSetCallback(
             const sp<V1_0::IGnssMeasurementCallback>& callback);
-<<<<<<< HEAD
     Return<V1_0::IGnssMeasurement::GnssMeasurementStatus> measurementSetCallback_1_1(
             const sp<IGnssMeasurementCallback>& callback);
-=======
->>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
+
     void measurementClose();
     Return<IGnssMeasurement::GnssMeasurementStatus> startTracking();
 
@@ -74,10 +67,8 @@ public:
 private:
     std::mutex mMutex;
     sp<V1_0::IGnssMeasurementCallback> mGnssMeasurementCbIface;
-<<<<<<< HEAD
+
     sp<IGnssMeasurementCallback> mGnssMeasurementCbIface_1_1;
-=======
->>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
 
     bool mTracking;
 };
