@@ -21,11 +21,7 @@
 #ifndef ANDROID_HARDWARE_GNSS_V1_0_GNSSMEASUREMENT_H
 #define ANDROID_HARDWARE_GNSS_V1_0_GNSSMEASUREMENT_H
 
-<<<<<<< HEAD
 #include <android/hardware/gnss/1.1/IGnssMeasurement.h>
-=======
-#include <android/hardware/gnss/1.0/IGnssMeasurement.h>
->>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
 
@@ -74,10 +70,7 @@ struct GnssMeasurement : public IGnssMeasurement {
  private:
     sp<GnssMeasurementDeathRecipient> mGnssMeasurementDeathRecipient = nullptr;
     sp<V1_0::IGnssMeasurementCallback> mGnssMeasurementCbIface = nullptr;
-<<<<<<< HEAD
     sp<IGnssMeasurementCallback> mGnssMeasurementCbIface_1_1 = nullptr;
-=======
->>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
     MeasurementAPIClient* mApi;
 };
 
