@@ -32,13 +32,8 @@
 
 
 #include <mutex>
-<<<<<<< HEAD
 #include <android/hardware/gnss/1.1/IGnss.h>
 #include <android/hardware/gnss/1.1/IGnssCallback.h>
-=======
-#include <android/hardware/gnss/1.0/IGnss.h>
-#include <android/hardware/gnss/1.0/IGnssCallback.h>
->>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
 #include <android/hardware/gnss/1.0/IGnssNiCallback.h>
 #include <LocationAPIClientBase.h>
 
