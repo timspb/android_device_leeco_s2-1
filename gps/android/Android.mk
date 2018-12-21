@@ -58,11 +58,7 @@ endif # BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET
 
 ifeq ($(BUILD_GNSS_HIDL_SERVICE), true)
 include $(CLEAR_VARS)
-<<<<<<< HEAD
 LOCAL_MODULE := android.hardware.gnss@1.1-service-qti
-=======
-LOCAL_MODULE := android.hardware.gnss@1.0-service-qti
->>>>>>> df54f6d... s2: gps: update from LA.UM.7.2.r1-05300-sdm660.0
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_INIT_RC := android.hardware.gnss@1.1-service-qti.rc
