@@ -16,6 +16,7 @@
 
 DEVICE_PATH := device/leeco/s2
 
+WITH_DEXPREOPT=false
 # Headers
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
